@@ -7,27 +7,38 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
 #listaus {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
     width: 100%;
 }
 
 #listaus td, #listaus th {
-    border: 1px, solid #ddd;
+    border: 1px;
+    border-style: solid;
+    border-color: #ddd;
     padding: 6px;
 }
-
-#listaus tr:ntn-child(even){background-color: #f2f2f2;}
 
 #listaus tr:hover {background-color: #ddd;}
 
 #listaus th {
     padding-top: 8px;
     padding-bottom: 8px;
-    text-align: left;
-    background-color: #E78CC5;
+    background-color: #336699;
     color: white;
 }
+.oikealle {
+    text-align: right;
+}
+.vasemmalle {
+    text-align: left;
+}
+
+input[type=text] {
+    width: 95%;
+    margin: 5px;
+}
+
 </style>
 <title>Asiakkaat</title>
 </head>
@@ -36,14 +47,14 @@
     <thead>
         <tr>
             <th class="oikealle">Hakusana:</th>
-            <th colspan="2"><input type="text" id="hakusana"></th>
-            <th><input type="button" value="hae" id="hakunappi"></th>
+            <th colspan="2"><input type="text" id="hakusana" placeholder="Kirjoita hakusana..."></th>
+            <th class="vasemmalle"><input type="button" value="Hae" id="hakunappi"></th>
         </tr>
         <tr>
-            <th>Etunimi</th>
-            <th>Sukunimi</th>
-            <th>Puhelin</th>
-            <th>Sähköposti</th>
+            <th class="vasemmalle">Etunimi</th>
+            <th class="vasemmalle">Sukunimi</th>
+            <th class="vasemmalle">Puhelin</th>
+            <th class="vasemmalle">Sähköposti</th>
         </tr>
     </thead>
     <tbody>
