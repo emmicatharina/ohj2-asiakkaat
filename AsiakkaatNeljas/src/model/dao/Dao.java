@@ -104,4 +104,20 @@ public class Dao {
 		}				
 		return paluuArvo;
     }
+    
+    public boolean poistaAsiakas(int asiakas_id) {
+    	boolean paluuArvo = true;
+    	sql = "DELETE FROM asiakkaat WHERE asiakas_id=?";
+    	try {
+    		con = yhdista();
+			stmtPrep = con.prepareStatement(sql);
+			stmtPrep.setInt(1, asiakas_id);
+			stmtPrep.executeUpdate();
+	        con.close();
+		} catch (Exception e) {				
+			e.printStackTrace();
+			paluuArvo = false;
+		}				
+		return paluuArvo;
+    }
 }
