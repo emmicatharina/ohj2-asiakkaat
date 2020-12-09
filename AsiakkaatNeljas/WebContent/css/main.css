@@ -28,6 +28,12 @@ table th {
     text-align: left;
 }
 
+.poista {
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 input[type=text] {
     width: 95%;
 }
